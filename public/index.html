@@ -34,15 +34,27 @@
         <button type="submit">לחץ למילוי תלונה</button>
       </form>
     </main>
-    <section id="login">
-      <h4>התחבר כמנהל:</h4>
-      <form action="/login" method="post">
-        <label class="loginLabel" for="name">שם:</label>
-        <input class="loginInputs" type="text" name="name" required /><br />
-        <label class="loginLabel" for="password">סיסמה:</label>
-        <input class="loginInputs" type="password" name="password" required />
-        <button id="loginBtn" type="submit">התחברות</button>
-      </form>
-    </section>
+    <footer>
+      <section id="login">
+        <h4>התחבר כמנהל:</h4>
+        <form action="/login" method="post">
+          <label class="loginLabel" for="name">שם:</label>
+          <input class="loginInputs" type="text" name="name" required /><br />
+          <label class="loginLabel" for="password">סיסמה:</label>
+          <input class="loginInputs" type="password" name="password" required />
+          <button id="loginBtn" type="submit">התחברות</button>
+        </form>
+      </section>
+      <section id="register">
+        <h4>הרשמה לקבלת תוכן פרסומי:</h4>
+        <form action="/register" method="post">
+          <label class="loginLabel" for="name">שם:</label>
+          <input class="loginInputs" type="text" name="name" required /><br />
+          <label class="loginLabel" for="email">אימייל:</label>
+          <input class="loginInputs" type="email" name="email" required />
+          <button id="registerBtn" type="submit">התחברות</button>
+        </form>
+      </section>
+    </footer>
   </body>
 </html>
