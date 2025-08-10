@@ -11,15 +11,15 @@
       <h3>שליחת תלונה אנונימית</h3>
       <form action="/submit" method="post">
         <label for="complaint">נושא התלונה:</label>
-        <select name="carrier" id="carrier" required>
-          <option>בחר נושא:</option>
+        <select name="category" id="category" required>
+          <option value="">בחר נושא:</option>
           <option value="אוכל">אוכל</option>
           <option value="ציוד">ציוד</option>
           <option value="פקודות">פקודות</option>
           <option value="אחר">אחר</option>
         </select>
-        <label for="complaint">תוכן התלונה:</label>
-        <textarea placeholder="מלא את תוכן התלונה" name="complaint" required></textarea>
+        <label for="message">תוכן התלונה:</label>
+        <textarea placeholder="מלא את תוכן התלונה" name="message" required></textarea>
         <button type="submit">שליחה</button>
       </form>
     </main>

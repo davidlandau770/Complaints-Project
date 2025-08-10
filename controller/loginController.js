@@ -23,9 +23,9 @@ const login = async (req, res) => {
         return res.status(401).json({ getToken: error })
     }
     res.cookie("token", token, { httpOnly: true, sameSite: true })
-    res.status(200).header("authorization", token).json({ msg: "Verified" });
-    console.log("aaa");
-    
+    // res.header("authorization", token).json({ msg: "Verified" }); // שליחה בהדר
+    res.redirect("verified.html")
+    // res.json({ msg: "Verified" })
 }
 
 const createToken = (admin) => {
@@ -33,10 +33,10 @@ const createToken = (admin) => {
         {
             id: admin.id,
             name: admin.name,
-            admin: true,
+            auth: "admin",
         },
         process.env.JWT_SECRET,
-        { expiresIn: "1h" }
+        { expiresIn: "10s" }
     );
     return token
 }

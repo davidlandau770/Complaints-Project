@@ -1,7 +1,17 @@
-import { addComplaintDB, getMaxId } from "../DAL/complaintDAL.js";
+import {
+  addComplaintDB,
+  getComplaintDB,
+  getMaxId,
+} from "../DAL/complaintDAL.js";
 
 const getComplaints = async (req, res) => {
-  res.send("get all");
+  let response;
+  try {
+    response = await getComplaintDB();
+  } catch (error) {
+    return res.json({ err: "getComplaintDB: " + error });
+  }
+  res.send(JSON.stringify(response));
 };
 
 const addComplaint = async (req, res) => {
@@ -9,13 +19,13 @@ const addComplaint = async (req, res) => {
   console.log(response);
   let resId = await getMaxId("complaints");
   const maxId = resId.length > 0 ? resId[0].id : 0;
-  const carrier = response.carrier;
-  const complaint = response.complaint;
+  const category = response.category;
+  const message = response.message;
   const createAt = new Date();
   const obj = {
     id: maxId + 1,
-    carrier: carrier,
-    complaint: complaint,
+    category: category,
+    message: message,
     createAt: createAt,
   };
   let result;
@@ -25,7 +35,7 @@ const addComplaint = async (req, res) => {
     return res.send({ err: error });
   }
   if (result.acknowledged === true) {
-    res.send(result);
+    res.redirect("thanks.html");
   } else {
     res.send({ err: "addComplaintDB" });
   }
