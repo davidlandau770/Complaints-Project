@@ -36,7 +36,7 @@ const createToken = (admin) => {
             auth: "admin",
         },
         process.env.JWT_SECRET,
-        { expiresIn: "10s" }
+        { expiresIn: "20s" }
     );
     return token
 }
