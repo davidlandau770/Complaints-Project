@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <title>מערכת הגשת תלונות</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body dir="rtl">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/IDF_Symbol.svg" alt="">
-    <p>ב"ה</p>
-    <main>
-      <h2>ברוכים הבאים למערכת הדיווח והגשת התלונות של חיילי צה"ל.</h2>
-      <p>
-        מערכת זו נועדה לאפשר לך, החייל והחיילת בשירות סדיר או קבע, לדווח על
-        תקלות, בעיות או מקרים הדורשים טיפול – בין אם מדובר באוכל, ציוד, תנאי
-        שירות, פקודות לא תקינות או כל נושא אחר שפוגע בשגרת השירות התקינה שלך.
-      </p>
-      <p>
-        הדיווח נשמר בצורה חסויה ומועבר לגורמים המוסמכים בצבא לצורך בדיקה וטיפול.
-        אנו מאמינים שלכל חייל מגיע יחס הוגן, תנאים ראויים ואוזן קשבת – ולכן
-        הקמנו את המערכת הזו כדי לשמוע אותך ולעזור ככל שניתן.
-      </p>
-      <p>
-        אנא הקפד למלא את הפרטים בצורה מדויקת ככל האפשר, כדי לאפשר טיפול מהיר
-        ויעיל.
-      </p>
-      <p><strong>צה"ל מקשיב. אנחנו כאן בשבילך.</strong></p>
-      <form action="complaint.html">
-        <button type="submit">לחץ למילוי תלונה</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet" />
+  <title>מערכת הגשת תלונות</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body dir="rtl">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/IDF_Symbol.svg" alt="">
+  <p>ב"ה</p>
+  <main>
+    <h2>ברוכים הבאים למערכת הדיווח והגשת התלונות של חיילי צה"ל.</h2>
+    <p>
+      מערכת זו נועדה לאפשר לך, החייל והחיילת בשירות סדיר או קבע, לדווח על
+      תקלות, בעיות או מקרים הדורשים טיפול – בין אם מדובר באוכל, ציוד, תנאי
+      שירות, פקודות לא תקינות או כל נושא אחר שפוגע בשגרת השירות התקינה שלך.
+    </p>
+    <p>
+      הדיווח נשמר בצורה חסויה ומועבר לגורמים המוסמכים בצבא לצורך בדיקה וטיפול.
+      אנו מאמינים שלכל חייל מגיע יחס הוגן, תנאים ראויים ואוזן קשבת – ולכן
+      הקמנו את המערכת הזו כדי לשמוע אותך ולעזור ככל שניתן.
+    </p>
+    <p>
+      אנא הקפד למלא את הפרטים בצורה מדויקת ככל האפשר, כדי לאפשר טיפול מהיר
+      ויעיל.
+    </p>
+    <p><strong>צה"ל מקשיב. אנחנו כאן בשבילך.</strong></p>
+    <form action="complaint.html">
+      <button type="submit">לחץ למילוי תלונה</button>
+    </form>
+  </main>
+  <footer>
+    <section id="login">
+      <h4>התחבר כמנהל:</h4>
+      <form action="/login" method="post">
+        <label class="loginLabel" for="name">שם:</label>
+        <input class="loginInputs" type="text" name="name" required /><br />
+        <label class="loginLabel" for="password">סיסמה:</label>
+        <input class="loginInputs" type="password" name="password" required />
+        <button id="loginBtn" type="submit">התחברות</button>
       </form>
-    </main>
-    <footer>
-      <section id="login">
-        <h4>התחבר כמנהל:</h4>
-        <form action="/login" method="post">
-          <label class="loginLabel" for="name">שם:</label>
-          <input class="loginInputs" type="text" name="name" required /><br />
-          <label class="loginLabel" for="password">סיסמה:</label>
-          <input class="loginInputs" type="password" name="password" required />
-          <button id="loginBtn" type="submit">התחברות</button>
-        </form>
-      </section>
-      <section id="register">
-        <h4>הרשמה לקבלת תוכן פרסומי:</h4>
-        <form action="/register" method="post">
-          <label class="loginLabel" for="name">שם:</label>
-          <input class="loginInputs" type="text" name="name" required /><br />
-          <label class="loginLabel" for="email">אימייל:</label>
-          <input class="loginInputs" type="email" name="email" required />
-          <button id="registerBtn" type="submit">התחברות</button>
-        </form>
-      </section>
-    </footer>
-  </body>
+    </section>
+    <section id="register">
+      <h4>הרשמה לקבלת תוכן פרסומי:</h4>
+      <form action="/register" method="post">
+        <label class="loginLabel" for="name">שם:</label>
+        <input class="loginInputs" type="text" name="name" required /><br />
+        <label class="loginLabel" for="email">אימייל:</label>
+        <input class="loginInputs" type="email" name="email" required />
+        <button id="registerBtn" type="submit">התחברות</button>
+      </form>
+    </section>
+  </footer>
+</body>
+
 </html>
